@@ -145,6 +145,7 @@ LOCAL_MODULE                    := mm-venc-omx-test720p
 LOCAL_MODULE_TAGS               := optional
 LOCAL_VENDOR_MODULE             := true
 LOCAL_CFLAGS                    := $(libmm-venc-def)
+LOCAL_CFLAGS                    += -Wno-error
 LOCAL_C_INCLUDES                := $(mm-venc-test720p-inc)
 LOCAL_ADDITIONAL_DEPENDENCIES   := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 LOCAL_PRELINK_MODULE            := false
@@ -173,6 +174,7 @@ LOCAL_HEADER_LIBRARIES := \
 LOCAL_MODULE                    := mm-video-encdrv-test
 LOCAL_MODULE_TAGS               := optional
 LOCAL_VENDOR_MODULE             := true
+LOCAL_CFLAGS                    += -Wno-error
 LOCAL_C_INCLUDES                := $(venc-test-inc)
 LOCAL_C_INCLUDES                += $(call project-path-for,qcom-media)/mm-core/inc
 
