@@ -101,8 +101,8 @@ LOCAL_HEADER_LIBRARIES := \
 LOCAL_MODULE                    := libOmxVenc
 LOCAL_MODULE_TAGS               := optional
 LOCAL_VENDOR_MODULE             := true
-LOCAL_CFLAGS                    := $(libmm-venc-def)
-LOCAL_CFLAGS                    += -Wno-error
+LOCAL_CFLAGS                    := $(libmm-venc-def) 
+LOCAL_CFLAGS                    += -Wno-error -Wno-unused-variable -Wno-unused-function -Wno-missing-field-initializers -Wno-unused-value
 LOCAL_C_INCLUDES                := $(libmm-venc-inc)
 
 LOCAL_PRELINK_MODULE      := false
@@ -140,7 +140,7 @@ LOCAL_HEADER_LIBRARIES := \
 LOCAL_MODULE                    := mm-venc-omx-test720p
 LOCAL_MODULE_TAGS               := optional
 LOCAL_VENDOR_MODULE             := true
-LOCAL_CFLAGS                    := $(libmm-venc-def)
+LOCAL_CFLAGS                    := $(libmm-venc-def) -Wno-error -Wno-unused-variable -Wno-unused-function -Wno-missing-field-initializers -Wno-unused-value
 LOCAL_C_INCLUDES                := $(mm-venc-test720p-inc)
 LOCAL_PRELINK_MODULE            := false
 LOCAL_SHARED_LIBRARIES          := libmm-omxcore libOmxVenc libbinder liblog
@@ -170,6 +170,7 @@ LOCAL_MODULE_TAGS               := optional
 LOCAL_VENDOR_MODULE             := true
 LOCAL_C_INCLUDES                := $(venc-test-inc)
 LOCAL_C_INCLUDES                += $(call project-path-for,qcom-media)/mm-core/inc
+LOCAL_CFLAGS                    := -Wno-error -Wno-unused-variable -Wno-unused-function -Wno-missing-field-initializers -Wno-unused-value
 LOCAL_PRELINK_MODULE            := false
 
 LOCAL_SRC_FILES                 := test/video_encoder_test.c

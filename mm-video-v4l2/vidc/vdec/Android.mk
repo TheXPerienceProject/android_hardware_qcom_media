@@ -130,7 +130,7 @@ LOCAL_MODULE                    := libOmxVdec
 LOCAL_MODULE_TAGS               := optional
 LOCAL_VENDOR_MODULE             := true
 LOCAL_CFLAGS                    := $(libOmxVdec-def)
-LOCAL_CFLAGS                    += -Wno-error
+LOCAL_CFLAGS                    += -Wno-error -Wno-unused-variable -Wno-unused-function -Wno-missing-field-initializers -Wno-unused-value
 LOCAL_C_INCLUDES                += $(libmm-vdec-inc)
 
 LOCAL_HEADER_LIBRARIES := \
@@ -177,7 +177,7 @@ ifeq ($(call is-board-platform-in-list,msm8974 msm8610 apq8084 mpq8092 msm8226),
 LOCAL_MODULE                    := libOmxVdecHevc
 LOCAL_MODULE_TAGS               := optional
 LOCAL_VENDOR_MODULE             := true
-LOCAL_CFLAGS                    := $(libOmxVdec-def)
+LOCAL_CFLAGS                    := $(libOmxVdec-def) -Wno-error -Wno-unused-variable -Wno-unused-function -Wno-missing-field-initializers -Wno-unused-value
 LOCAL_C_INCLUDES                += $(libmm-vdec-inc)
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
@@ -220,7 +220,7 @@ mm-vdec-test-inc    += $(LOCAL_PATH)/inc
 LOCAL_MODULE                    := mm-vdec-omx-test
 LOCAL_MODULE_TAGS               := optional
 LOCAL_VENDOR_MODULE             := true
-LOCAL_CFLAGS                    := $(libOmxVdec-def)
+LOCAL_CFLAGS                    := $(libOmxVdec-def) -Wno-error -Wno-unused-variable -Wno-unused-function -Wno-missing-field-initializers -Wno-unused-value
 LOCAL_C_INCLUDES                := $(mm-vdec-test-inc)
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
@@ -244,7 +244,7 @@ mm-vdec-drv-test-inc    += $(LOCAL_PATH)/inc
 LOCAL_MODULE                    := mm-video-driver-test
 LOCAL_MODULE_TAGS               := optional
 LOCAL_VENDOR_MODULE             := true
-LOCAL_CFLAGS                    := $(libOmxVdec-def)
+LOCAL_CFLAGS                    := $(libOmxVdec-def) -Wno-error -Wno-unused-variable -Wno-unused-function -Wno-missing-field-initializers -Wno-unused-value
 LOCAL_C_INCLUDES                := $(mm-vdec-drv-test-inc)
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
